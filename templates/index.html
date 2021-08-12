@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Excel-generator</title>
+  <meta charset="UTF-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='take_forms.js') }}"></script>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+
+  </head>
+  <body>
+      <div class="form">
+          <div class="up-box">
+              <select class="form-select take" aria-label="Default select example">
+                  <option value="" selected>Cliente</option>
+                  <option value="Maurizio Montanari">Maurizio Montanari</option>
+              </select>
+              <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control take" placeholder="First name" aria-label="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control take" placeholder="Last name" aria-label="Last name">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                    <input type="time" class="form-control take" placeholder="First name" aria-label="Orario">
+                  </div>
+                  <div class="col">
+                    <input type="date" class="form-control take" placeholder="Last name" aria-label="Data">
+                  </div>
+              </div>
+          </div>
+          <div class="down-box">
+            <select class="form-select take" aria-label="Default select example">
+              <option value="" selected>Tipo di operazione</option>
+              <option value="Consiglia">Consiglia</option>
+              <option value="Condivisione ">Condivisione</option>
+            </select>
+            <div class="row">
+                <div class="col mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Descrizione (POST)</label>
+                  <textarea class="form-control take" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Testo (POST) (se condiviso)</label>
+                  <textarea class="form-control take" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">#</span>
+                <input type="text" class="form-control take" placeholder="Hashtag" aria-label="Hashtag" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <button type="submit" name="form-submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="right-box">
+      </div>
+  </body>
+</html>
