@@ -2,6 +2,7 @@
 $(document).on ("click", "button[name='form-submit']", function () {
     const x = document.getElementsByClassName("take");
 
+
     const list_inputs = {
         Cliente: x[0].value,
         Nome_compilatore: x[1].value,
@@ -15,11 +16,15 @@ $(document).on ("click", "button[name='form-submit']", function () {
 
     }
 
+    for (i=0; i<x.length; i++) {
+        x[i].value = ""}
+
     $(".right-box").append("<ul>" +
         "<li><b>Cliente</b>: "+ list_inputs["Cliente"] +"</li>" +
         "<li><b>Nome_compilatore</b>: "+ list_inputs["Nome_compilatore"] +"</li>" +
         "<li><b>Cognome_compilatore</b>: "+ list_inputs["Cognome_compilatore"] +"</li>" +
         "<li><b>Data</b>: "+ list_inputs["Data"] +"</li>" +
+        "<li><b>Orario</b>: "+ list_inputs["Orario"] +"</li>" +
         "<li><b>Tipo_operazione</b>: "+ list_inputs["Tipo_operazione"] +"</li>" +
         "<li><b>Descrizione_post</b>: "+ list_inputs["Descrizione_post"] +"</li>" +
         "<li><b>Testo_post</b>: "+ list_inputs["Testo_post"] +"</li>" +
@@ -35,6 +40,8 @@ $(document).on ("click", "button[name='form-submit']", function () {
           contentType: "application/json",
           dataType: 'json',
           success: function(result) {
+            alert('Adding operation completed');
+    }
 
 
-    }})})
+    })})

@@ -11,51 +11,54 @@
 
   </head>
   <body>
-      <div class="form">
+      <div id="form" class="form">
           <div class="up-box">
-              <select class="form-select take" aria-label="Default select example">
+              <select class="form-select form-select-lg take" aria-label="Default select example">
                   <option value="" selected>Cliente</option>
                   <option value="Maurizio Montanari">Maurizio Montanari</option>
               </select>
               <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control take" placeholder="First name" aria-label="First name">
+                    <input type="text" class="form-control form-control-lg take" placeholder="First name" aria-label="First name">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control take" placeholder="Last name" aria-label="Last name">
+                    <input type="text" class="form-control form-control-lg take" placeholder="Last name" aria-label="Last name">
                   </div>
               </div>
               <div class="row">
                   <div class="col">
-                    <input type="time" class="form-control take" placeholder="First name" aria-label="Orario">
+                    <input type="time" class="form-control form-control-lg take" placeholder="First name" aria-label="Orario">
                   </div>
                   <div class="col">
-                    <input type="date" class="form-control take" placeholder="Last name" aria-label="Data">
+                    <input type="date" class="form-control form-control-lg take" placeholder="Last name" aria-label="Data">
                   </div>
               </div>
           </div>
           <div class="down-box">
-            <select class="form-select take" aria-label="Default select example">
+            <select class="form-select form-select-lg take" aria-label="Default select example">
               <option value="" selected>Tipo di operazione</option>
               <option value="Consiglia">Consiglia</option>
               <option value="Condivisione ">Condivisione</option>
             </select>
             <div class="row">
                 <div class="col mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Descrizione (POST)</label>
-                  <textarea class="form-control take" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <label for="exampleFormControlTextarea1" class="form-label form-control-lg">Descrizione (POST)</label>
+                  <textarea class="form-control form-control-lg take" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="col mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Testo (POST) (se condiviso)</label>
-                  <textarea class="form-control take" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <label for="exampleFormControlTextarea1" class="form-label form-control-lg">Testo (POST) (se condiviso)</label>
+                  <textarea class="form-control form-control-lg take" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">#</span>
-                <input type="text" class="form-control take" placeholder="Hashtag" aria-label="Hashtag" aria-describedby="basic-addon1">
+                <input type="text" class="form-control form-control-lg take" placeholder="Hashtag" aria-label="Hashtag" aria-describedby="basic-addon1">
             </div>
           </div>
-          <button type="submit" name="form-submit" class="btn btn-primary">Submit</button>
+          <div class="button-box">
+              <button type="submit" name="form-submit" class="btn btn-outline-dark">Submit</button>
+              <a href="/download"><button class="btn btn-outline-dark" >Download the Excel</button></a>
+          </div>
       </div>
       <div class="right-box">
       </div>
